@@ -7,9 +7,8 @@ assert cap.isOpened(), "Error reading video file"
 
 frame_width = cap.get(cv2.CAP_PROP_FRAME_WIDTH)  # 获取宽度
 frame_height = cap.get(cv2.CAP_PROP_FRAME_HEIGHT) # 获取高度
-region_points = [(int(frame_width/2), 0), (int(frame_width/2), int(frame_height))]                                      # line counting
-# region_points = [(20, 400), (1080, 400), (1080, 360), (20,360)]  # rectangle region
-# region_points = [(20, 400), (1080, 400), (1080, 360), (20, 360), (20, 400)]   # polygon region
+region_points = [(int(frame_width/2), 0), (int(frame_width/2), int(frame_height))]      # line counting
+
 
 # Video writer
 w, h, fps = (int(cap.get(x)) for x in (cv2.CAP_PROP_FRAME_WIDTH, cv2.CAP_PROP_FRAME_HEIGHT, cv2.CAP_PROP_FPS))
@@ -34,8 +33,6 @@ while cap.isOpened():
         break
 
     results = counter(im0)
-
-    # print(results)  # access the output
 
     video_writer.write(results.plot_im)  # write the processed frame.
 
