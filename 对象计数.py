@@ -19,9 +19,8 @@ counter = solutions.ObjectCounter(
     show=True,  # display the output
     region=region_points,  # pass region points
     model="yolo11n.pt",  # model="yolo11n-obb.pt" for object counting with OBB model.
-    classes=[2],  # count specific classes i.e. person and car with COCO pretrained model.
-    show_labels=False
-    # tracker="botsort.yaml",  # choose trackers i.e "bytetrack.yaml"
+    classes=[2],  # count specific classes i.e. person and car with COCO pretrained model
+    tracker="botsort.yaml",  # choose trackers i.e "bytetrack.yaml"
 )
 
 # Process video
