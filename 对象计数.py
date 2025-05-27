@@ -7,7 +7,7 @@ assert cap.isOpened(), "Error reading video file"
 
 frame_width = cap.get(cv2.CAP_PROP_FRAME_WIDTH)  # 获取宽度
 frame_height = cap.get(cv2.CAP_PROP_FRAME_HEIGHT) # 获取高度
-region_points = [(int(frame_width/2), 0), (int(frame_width/2), int(frame_height))]      # line counting
+region_points = [(int(frame_width/4), 0), (int(frame_width/4), int(frame_height))]      # line counting
 
 
 # Video writer
